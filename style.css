@@ -23,6 +23,10 @@ h1 {
   color: #5a0000;
   text-shadow: #e8e8e8 2px 2px 0px;
   font-weight: 600;
+  transition: transform 0.7s;
+}
+h1:hover {
+  transform: scale(1.6);
 }
 
 .toolbar {
@@ -44,43 +48,8 @@ button, input[type="color"], input[type="range"] {
   text-shadow: #e8e8e8 1px 1px 0px;
   font-family: 'Winky Sans', sans-serif;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
 button:hover, input[type="color"]:hover, input[type="range"]:hover {
-  background-color: #E5E4E2;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  width: 100%;
-  padding: 20px;
-}
-
-canvas {
-  border: 2px solid #FF8282;
-  border-radius: 12px;
-
-}
-.colorPickerLabel {
-    cursor: pointer;
-    display: inline-block;
-  }
-  
-  .colorIcon {
-    width: 40px; /* Tamaño de tu imagen */
-    height: 40px;
-    object-fit: contain;
-    border: 2px solid #FF8282;
-    border-radius: 8px;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  
-  .colorIcon:hover {
-    transform: scale(1.1);
-    background-color: #E5E4E2;
-  }
-  
+  background-color: #802a

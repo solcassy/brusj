@@ -52,4 +52,64 @@ button, input[type="color"], input[type="range"] {
 }
 
 button:hover, input[type="color"]:hover, input[type="range"]:hover {
-  background-color: #802a
+  background-color: #802a2a;
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px;
+}
+
+canvas {
+  border: 2px solid #FF8282;
+  border-radius: 12px;
+
+}
+.colorPickerLabel {
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .colorIcon {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+    border: 2px solid #FF8282;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .colorIcon:hover {
+    transform: scale(1.1);
+   
+  }
+  @media (max-width: 768px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .toolbar button,
+    .toolbar input[type="range"],
+    .toolbar label {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    .toolbar button,
+    .toolbar input[type="range"],
+    .toolbar label {
+      font-size: 12px;
+    }
+  }

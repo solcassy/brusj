@@ -8,6 +8,16 @@ function setup() {
   let canvas = createCanvas(windowWidth * 0.9, windowHeight * 0.7);
   canvas.parent('canvasContainer');
   background(255);
+  select('#randomColorBtn').mousePressed(() => {
+    brushColor = color(random(255), random(255), random(255)).toString('#rrggbb');
+    select('#colorPicker').value(brushColor);
+  });
+  
+  select('#randomSizeBtn').mousePressed(() => {
+    brushSize = int(random(1, 21));
+    select('#sizePicker').value(brushSize);
+  });
+  
 
   select('#undoBtn').mousePressed(undoStroke);
   select('#redoBtn').mousePressed(redoStroke);
